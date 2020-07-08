@@ -5,6 +5,7 @@ import store from "./redux/store";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./assets/font-awesome/css/font-awesome.min.css";
 import Mainpage from "./pages/main";
+import Loginpage from "./pages/loginPage";
 import Orderpage from "./pages/order";
 import Orderdetailpage from "./pages/orderDetail";
 import Listorder from "./pages/listOrder";
@@ -17,16 +18,10 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
+            <Loginpage />
+          </Route>
+          <Route path="/home">
             <Mainpage />
-          </Route>
-          <Route exact path="/order_page">
-            <Orderpage />
-          </Route>
-          <Route exact path="/order_detail_page">
-            <Orderdetailpage />
-          </Route>
-          <Route exact path="/list_order">
-            <Listorder />
           </Route>
         </Switch>
       </Router>

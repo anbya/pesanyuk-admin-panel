@@ -607,9 +607,20 @@
   color: linear-gradient(to right top, #000000, #38121c, #6d1528, #a3162d, #d92027);
 }
 
+.myBtn {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0);
+  color: #0E86D4;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
 .my-btn-sm {
   display: inline-block;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
   color: #0E86D4;
   text-transform: uppercase;
   letter-spacing: 2px;

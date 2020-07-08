@@ -1,26 +1,28 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import scrollToComponent from 'react-scroll-to-component';
+// import scrollToComponent from 'react-scroll-to-component';
 import "../App.css";
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  Container
+  InputGroup,
+  Input,
+  Container,
+  Row,
+  Col
 } from "reactstrap";
-import pictarmyali from '../assets/img/armyali-white.png';
-import pictbg from '../assets/img/bg.jpg';
-import Jumbotron from "./jumbotron";
-import Skills from "./skill";
+import pict300x300 from '../assets/img/300x300.png';
+// import pictarmyali from '../assets/img/armyali-white.png';
+// import pictbg from '../assets/img/bg.jpg';
+// import Jumbotron from "./jumbotron";
+// import Skills from "./skill";
 // import Experience from "./experience";
-import Portofolio from "./portofolio";
-import Services from "./services";
+// import Portofolio from "./portofolio";
+// import Services from "./services";
 // import Clients from "./clients";
 // import Testimonial from "./testimonial";
-import Contact from "./contact";
+// import Contact from "./contact";
+import queryString from 'query-string';
+
 
 class mainPage extends Component {
   constructor(props) {
@@ -28,7 +30,8 @@ class mainPage extends Component {
     this.state = {
       navCollapse:false,
       navState:"",
-      theposition:""
+      theposition:"",
+      listItem:["Item pertama","Item kedua","Item ketiga","Item keempat","Item kelima","Item keenam","Item ketujuh","Item kedelapan","Item kesembilan","Item kesepuluh","Item kesebelas","Item keduabelas"]
     };
   }
   navToggle = () =>  {
@@ -38,74 +41,44 @@ class mainPage extends Component {
     });
   }
   render() {
+    let url = this.props.location.search;
+    let params = queryString.parse(url);
+    // console.log(params.id);
     return (
-      <div>
-        <Container fluid={true} style={{backgroundColor:"#f8f9fa"}}>
-          <Navbar light expand="md" fixed="top" style={{backgroundColor:"#2A272A"}}>
-            <NavbarBrand href="/" style={{width:"150px"}}>
-              <img width="100%" src={pictarmyali} alt="pictarmyali" />
-              {/* <h3 className="display-5">ARMYALI</h3> */}
-            </NavbarBrand>
-            <NavbarToggler className="navbar-dark" onClick={() => this.navToggle()} style={{borderColor:"#FFFFFF"}} />
-            <Collapse isOpen={this.state.navCollapse} navbar>
-              <Nav className="ml-auto" navbar >
-                <li className="nav-item" onClick={(e) => {e.preventDefault();this.setState({...this.state,navState:"HOME"});scrollToComponent(this.HOME, { offset: -100, align: 'top', duration: 500})}}>
-                  <a className={(this.state.navState === "HOME" ||this.state.navState === ""?'myNavlinkActive':'myNavlink')} href="/">HOME</a>
-                </li>
-                <li className="nav-item" onClick={(e) => {e.preventDefault();this.setState({...this.state,navState:"SKILLS"});scrollToComponent(this.SKILLS, { offset: -100, align: 'top', duration: 500})}}>
-                  <a className={(this.state.navState === "SKILLS"?'myNavlinkActive':'myNavlink')} href="/">SKILLS</a>
-                </li>
-                <li className="nav-item" onClick={(e) => {e.preventDefault();this.setState({...this.state,navState:"SERVICES"});scrollToComponent(this.SERVICES, { offset: -100, align: 'top', duration: 500})}}>
-                  <a className={(this.state.navState === "SERVICES"?'myNavlinkActive':'myNavlink')} href="/">WHAT I DO</a>
-                </li>
-                {/* <li className="nav-item" onClick={(e) => {e.preventDefault();this.setState({...this.state,navState:"EXPERIENCE"});scrollToComponent(this.EXPERIENCE, { offset: -100, align: 'top', duration: 500})}}>
-                  <a className={(this.state.navState === "EXPERIENCE"?'myNavlinkActive':'myNavlink')} href="/">EXPERIENCE</a>
-                </li> */}
-                <li className="nav-item" onClick={(e) => {e.preventDefault();this.setState({...this.state,navState:"PORTFOLIO"});scrollToComponent(this.PORTFOLIO, { offset: -100, align: 'top', duration: 500})}}>
-                  <a className={(this.state.navState === "PORTFOLIO"?'myNavlinkActive':'myNavlink')} href="/">PROJECTS</a>
-                </li>
-                <li className="nav-item" onClick={(e) => {e.preventDefault();this.setState({...this.state,navState:"CONTACT"});scrollToComponent(this.CONTACT, { offset: -100, align: 'top', duration: 500})}}>
-                  <a className={(this.state.navState === "CONTACT"?'myNavlinkActive':'myNavlink')} href="/">CONTACT</a>
-                </li>
-              </Nav>
-            </Collapse>
-          </Navbar>
+      <div style={{backgroundColor:"#F5F5F5"}}>
+        <Container fluid={true} style={{backgroundColor:"#F5F5F5",position:"-webkit-sticky",position:"sticky",top:0,zIndex:998,padding:10}}>
+          <div className="card">
+            <div className="card-body" style={{padding:10}}>
+              <Row>
+                <Col xs="12" sm="12" md="12" style={{color:"#000000"}}>
+                  <span className="myFont-title myFontbold myColor">NAHMTHAISUKI & BBQ</span><br />
+                  <span className="myFont-subtitle myColor">JL K.H WAHID HASYIM No 79-81 Gondangdia, Menteng, Jakarta pusat</span>
+                </Col>
+              </Row>
+            </div>
+          </div>
         </Container>
-        <Container fluid={true} style={{paddingTop:"17vh",backgroundImage:`url(${pictbg})`,backgroundSize:"cover"}}>
-          <section ref={(section) => { this.HOME = section; }}>
-            <Jumbotron />
-          </section>
-        </Container>
-        <Container fluid={true}>
-          <section ref={(section) => { this.SKILLS = section; }}>
-            <Skills />
-          </section>
-        </Container>
-        <Container fluid={true}>
-          <section ref={(section) => { this.SERVICES = section; }}>
-            <Services />
-          </section>
-        </Container>
-        {/* <Container fluid={true}>
-          <section ref={(section) => { this.EXPERIENCE = section; }}>
-            <Experience />
-          </section>
-        </Container> */}
-        <Container fluid={true} style={{paddingBottom:"30px"}} onClick={() => {this.setState({...this.state,theposition:"Portofolio"});}}>
-          <section ref={(section) => { this.PORTFOLIO = section; }}>
-            <Portofolio />
-          </section>
-        </Container>
-        {/* <Container fluid={true}>
-          <Clients />
-        </Container>
-        <Container fluid={true}>
-          <Testimonial />
-        </Container> */}
-        <Container fluid={true} style={{marginBottom:"20vh"}}>
-          <section ref={(section) => { this.CONTACT = section; }}>
-            <Contact />
-          </section>
+        <Container fluid={true} style={{backgroundColor:"#F5F5F5",padding:10}}>
+          <div className="card">
+            <div className="card-header">
+              <Row>
+                <Col xs="10" sm="10" md="10" style={{display:"flex",justifyContent:"flex-start",alignItems:"center"}}>
+                  <span style={{fontWeight:"bold"}}>Header menu</span>
+                </Col>
+                <Col xs="2" sm="2" md="2" style={{display:"flex",justifyContent:"flex-end",alignItems:"center"}}>
+                  <button className="myBtn"><i className="fa fa-plus-square fa-2x" aria-hidden="true"></i></button>
+                </Col>
+              </Row>
+            </div>
+            <div className="card-body" style={{padding:10}}>
+              <Row>
+                <Col xs="12" sm="12" md="12" style={{color:"#000000"}}>
+                  <span className="myFont-title myFontbold myColor">NAHMTHAISUKI & BBQ</span><br />
+                  <span className="myFont-subtitle myColor">JL K.H WAHID HASYIM No 79-81 Gondangdia, Menteng, Jakarta pusat</span>
+                </Col>
+              </Row>
+            </div>
+          </div>
         </Container>
       </div>
     );
