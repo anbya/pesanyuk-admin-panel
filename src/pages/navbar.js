@@ -6,9 +6,13 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
 } from 'reactstrap';
-import pict300x150 from '../assets/img/300x150.png';
+import pictpesanyuk from '../assets/img/pesanyuk.png';
 
 class navbar extends Component {
     constructor(props) {
@@ -18,19 +22,6 @@ class navbar extends Component {
         fixedNav:""
       };
     }
-    componentDidMount() {
-      document.addEventListener('scroll', () => {
-        if (window.scrollY <= 100) {
-          this.setState({ 
-            fixedNav:"" 
-          })
-        } else {
-          this.setState({ 
-            fixedNav:"top" 
-          })
-        }
-      });
-    }
     navToggle = () =>  {
       this.setState({
         ...this.state,
@@ -39,34 +30,29 @@ class navbar extends Component {
     }
     render() {
         return (
-            <div>
-              <Navbar color="light" light expand="md" fixed={this.state.fixedNav}>
-                <NavbarBrand href="/" style={{width:"150px"}}><img width="100%" src={pict300x150} alt="pict300x150" /></NavbarBrand>
+              <Navbar color="light" light expand="md" style={{position:"sticky",top:0,zIndex:1}}>
+                <NavbarBrand href="/home" style={{width:"150px"}}><img className="portoimage" width="100%" src={pictpesanyuk} alt="pictpesanyuk" /></NavbarBrand>
                 <NavbarToggler onClick={() => this.navToggle()} />
                 <Collapse isOpen={this.state.navCollapse} navbar>
-                  <Nav className="ml-auto" navbar >
-                    <li className="nav-item">
-                      <a className="myNavlinkActive" href="/">HOME</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="myNavlink" href="/">SKILLS</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="myNavlink" href="/">EXPERIENCE</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="myNavlink" href="/">PORTFOLIO</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="myNavlink" href="/">SERVICES</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="myNavlink" href="/">CONTACT</a>
-                    </li>
+                  <Nav className="ml-auto" navbar>
+                    <NavItem>
+                      <NavLink href="/outlet">Outlet</NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink href="/categoryItem">Category item</NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink href="/item">Item</NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink href="/staff">Staff</NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink href="/">Log Out</NavLink>
+                    </NavItem>
                   </Nav>
                 </Collapse>
               </Navbar>
-            </div>
         );
     }
 }
