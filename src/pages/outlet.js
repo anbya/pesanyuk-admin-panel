@@ -8,18 +8,7 @@ import {
   Row,
   Col
 } from "reactstrap";
-// import pict300x300 from '../assets/img/300x300.png';
-// import pictpesanyuk from '../assets/img/pesanyuk.png';
-// import pictarmyali from '../assets/img/armyali-white.png';
-// import pictbg from '../assets/img/bg.jpg';
-// import Jumbotron from "./jumbotron";
-// import Skills from "./skill";
-// import Experience from "./experience";
-// import Portofolio from "./portofolio";
-// import Services from "./services";
-// import Clients from "./clients";
-// import Testimonial from "./testimonial";
-// import queryString from 'query-string';
+import { FaStoreAlt } from "react-icons/fa";
 
 
 class outletPage extends Component {
@@ -61,61 +50,29 @@ class outletPage extends Component {
                 <div className="card-body" style={{padding:0}}>
                     <Container fluid={true}>
                         <Row>
-                        <Col xs="12" sm="12" md="4" style={{padding:0}}>
+                        <Col xs="12" sm="12" md="4" style={{padding:5}}>
                             <div className="card">
                             <div className="card-body">
                                 <Row>
-                                <Col xs="12" sm="12" md="12" style={{color:"#000000"}}>
+                                <Col xs="2" sm="2" md="2" style={{color:"#003060",display:"flex",justifyContent:"center",alignItems:"center",borderRight:"#003060 3px solid"}}>
+                                  <FaStoreAlt size="5vh" />
+                                </Col>
+                                <Col xs="10" sm="10" md="10" style={{color:"#000000"}}>
                                     <span className="myFont-title myFontbold myColor">NAHMTHAISUKI & BBQ</span><br />
                                     <span className="myFont-subtitle myColor">JL K.H WAHID HASYIM No 79-81 Gondangdia, Menteng, Jakarta pusat</span>
                                 </Col>
                                 </Row>
                             </div>
-                            </div>
-                        </Col>
-                        <Col xs="12" sm="12" md="4" style={{padding:0}}>
-                            <div className="card">
-                            <div className="card-body">
+                            <div className="card-footer">
                                 <Row>
-                                <Col xs="12" sm="12" md="12" style={{color:"#000000"}}>
-                                    <span className="myFont-title myFontbold myColor">NAHMTHAISUKI & BBQ</span><br />
-                                    <span className="myFont-subtitle myColor">JL K.H WAHID HASYIM No 79-81 Gondangdia, Menteng, Jakarta pusat</span>
+                                <Col xs="4" sm="4" md="4" style={{color:"#003060",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                  <FaStoreAlt size="2vh" />
                                 </Col>
-                                </Row>
-                            </div>
-                            </div>
-                        </Col>
-                        <Col xs="12" sm="12" md="4" style={{padding:0}}>
-                            <div className="card">
-                            <div className="card-body">
-                                <Row>
-                                <Col xs="12" sm="12" md="12" style={{color:"#000000"}}>
-                                    <span className="myFont-title myFontbold myColor">NAHMTHAISUKI & BBQ</span><br />
-                                    <span className="myFont-subtitle myColor">JL K.H WAHID HASYIM No 79-81 Gondangdia, Menteng, Jakarta pusat</span>
+                                <Col xs="4" sm="4" md="4" style={{color:"#003060",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                  <FaStoreAlt size="2vh" />
                                 </Col>
-                                </Row>
-                            </div>
-                            </div>
-                        </Col>
-                        <Col xs="12" sm="12" md="4" style={{padding:0}}>
-                            <div className="card">
-                            <div className="card-body">
-                                <Row>
-                                <Col xs="12" sm="12" md="12" style={{color:"#000000"}}>
-                                    <span className="myFont-title myFontbold myColor">NAHMTHAISUKI & BBQ</span><br />
-                                    <span className="myFont-subtitle myColor">JL K.H WAHID HASYIM No 79-81 Gondangdia, Menteng, Jakarta pusat</span>
-                                </Col>
-                                </Row>
-                            </div>
-                            </div>
-                        </Col>
-                        <Col xs="12" sm="12" md="4" style={{padding:0}}>
-                            <div className="card">
-                            <div className="card-body">
-                                <Row>
-                                <Col xs="12" sm="12" md="12" style={{color:"#000000"}}>
-                                    <span className="myFont-title myFontbold myColor">NAHMTHAISUKI & BBQ</span><br />
-                                    <span className="myFont-subtitle myColor">JL K.H WAHID HASYIM No 79-81 Gondangdia, Menteng, Jakarta pusat</span>
+                                <Col xs="4" sm="4" md="4" style={{color:"#003060",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                  <FaStoreAlt size="2vh" />
                                 </Col>
                                 </Row>
                             </div>
