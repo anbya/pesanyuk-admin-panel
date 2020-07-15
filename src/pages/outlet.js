@@ -8,8 +8,7 @@ import {
   Row,
   Col
 } from "reactstrap";
-import { FaStoreAlt } from "react-icons/fa";
-
+import { FaStoreAlt , FaEdit } from "react-icons/fa";
 
 class outletPage extends Component {
   constructor(props) {
@@ -40,7 +39,7 @@ class outletPage extends Component {
                 <div className="card-header">
                   <Row>
                     <Col xs="10" sm="10" md="10" style={{display:"flex",justifyContent:"flex-start",alignItems:"center"}}>
-                      <span style={{fontWeight:"bold"}}>Outlet menu</span>
+                      <span style={{fontWeight:"bold"}}>Outlet list</span>
                     </Col>
                     <Col xs="2" sm="2" md="2" style={{display:"flex",justifyContent:"flex-end",alignItems:"center"}}>
                       <button className="myBtn"><i className="fa fa-plus-square fa-2x" aria-hidden="true"></i></button>
@@ -57,22 +56,19 @@ class outletPage extends Component {
                                 <Col xs="2" sm="2" md="2" style={{color:"#003060",display:"flex",justifyContent:"center",alignItems:"center",borderRight:"#003060 3px solid"}}>
                                   <FaStoreAlt size="5vh" />
                                 </Col>
-                                <Col xs="10" sm="10" md="10" style={{color:"#000000"}}>
-                                    <span className="myFont-title myFontbold myColor">NAHMTHAISUKI & BBQ</span><br />
+                                <Col xs="10" sm="10" md="10" style={{color:"#000000",display:"flex",flexDirection:"column"}}>
+                                    <span className="myFont-title myFontbold myColor">NAHMTHAISUKI & BBQ</span>
                                     <span className="myFont-subtitle myColor">JL K.H WAHID HASYIM No 79-81 Gondangdia, Menteng, Jakarta pusat</span>
                                 </Col>
                                 </Row>
                             </div>
-                            <div className="card-footer">
+                            <div className="card-footer" style={{padding:0}}>
                                 <Row>
-                                <Col xs="4" sm="4" md="4" style={{color:"#003060",display:"flex",justifyContent:"center",alignItems:"center"}}>
-                                  <FaStoreAlt size="2vh" />
+                                <Col xs="6" sm="6" md="6" style={{color:"#003060",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                  <button className="myBtn"><i className="fa fa-pencil-square fa-2x" aria-hidden="true"></i></button>
                                 </Col>
-                                <Col xs="4" sm="4" md="4" style={{color:"#003060",display:"flex",justifyContent:"center",alignItems:"center"}}>
-                                  <FaStoreAlt size="2vh" />
-                                </Col>
-                                <Col xs="4" sm="4" md="4" style={{color:"#003060",display:"flex",justifyContent:"center",alignItems:"center"}}>
-                                  <FaStoreAlt size="2vh" />
+                                <Col xs="6" sm="6" md="6" style={{color:"#003060",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                  <button className="myBtn-danger"><i className="fa fa-ban fa-2x" aria-hidden="true"></i></button>
                                 </Col>
                                 </Row>
                             </div>

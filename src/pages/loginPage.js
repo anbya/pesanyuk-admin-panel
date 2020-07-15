@@ -53,7 +53,7 @@ class mainPage extends Component {
           <div className="card-body" style={{backgroundColor:"rgba(255, 255, 255, 0.6)",borderRadius:10}}>
             <Row style={{paddingTop:30,paddingBottom:30}}>
               <Col style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-                <img className="portoimage" width="75%" src={pictpesanyuk} alt="pictpesanyuk" />
+                {/* <img className="portoimage" width="75%" src={pictpesanyuk} alt="pictpesanyuk" /> */}
               </Col>
             </Row>
             <Row>

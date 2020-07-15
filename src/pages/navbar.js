@@ -31,7 +31,9 @@ class navbar extends Component {
     render() {
         return (
               <Navbar color="light" light expand="md" style={{position:"sticky",top:0,zIndex:1}}>
-                <NavbarBrand href="/home" style={{width:"150px"}}><img className="portoimage" width="100%" src={pictpesanyuk} alt="pictpesanyuk" /></NavbarBrand>
+                <NavbarBrand href="/home" style={{width:"150px"}}>
+                  {/* <img className="portoimage" width="100%" src={pictpesanyuk} alt="pictpesanyuk" /> */}
+                </NavbarBrand>
                 <NavbarToggler onClick={() => this.navToggle()} />
                 <Collapse isOpen={this.state.navCollapse} navbar>
                   <Nav className="ml-auto" navbar>

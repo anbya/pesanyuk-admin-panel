@@ -618,6 +618,17 @@
   cursor: pointer;
 }
 
+.myBtn-danger {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0);
+  color: #ff0000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
 .my-btn-sm {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0);
