@@ -74,7 +74,7 @@ class outletPage extends Component {
             </ModalFooter>
           </Modal>
           <Modal isOpen={this.state.prmModaledit} toggle={() => this.modalEditToggle()} backdrop={"static"}>
-            <ModalHeader toggle={() => this.modalEditToggle()}>Outlet</ModalHeader>
+            <ModalHeader toggle={() => this.modalEditToggle()}>Outlet detail</ModalHeader>
             <ModalBody>
               <Row>
                 <Col>

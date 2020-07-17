@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-// import scrollToComponent from 'react-scroll-to-component';
 import "../App.css";
 import {
   // InputGroup,
@@ -12,19 +11,7 @@ import {
   FormGroup,
   Label
 } from "reactstrap";
-// import pict300x300 from '../assets/img/300x300.png';
 import pictpesanyuk from '../assets/img/pesanyuk.png';
-// import pictarmyali from '../assets/img/armyali-white.png';
-// import pictbg from '../assets/img/bg.jpg';
-// import Jumbotron from "./jumbotron";
-// import Skills from "./skill";
-// import Experience from "./experience";
-// import Portofolio from "./portofolio";
-// import Services from "./services";
-// import Clients from "./clients";
-// import Testimonial from "./testimonial";
-// import Contact from "./contact";
-// import queryString from 'query-string';
 
 
 class mainPage extends Component {
