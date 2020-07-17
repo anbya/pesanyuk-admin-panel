@@ -44,9 +44,6 @@ class mainPage extends Component {
     });
   }
   render() {
-    // let url = this.props.location.search;
-    // let params = queryString.parse(url);
-    // console.log(params.id);
     return (
       <Container fluid={true} style={{backgroundColor:"#003060",height:"100vh",display:"flex",justifyContent:"center",alignItems:"center"}}>
         <div className="card" style={{backgroundColor:"rgba(255, 255, 255, 0)"}}>
@@ -60,11 +57,11 @@ class mainPage extends Component {
               <Col>
                 <FormGroup>
                   <Label for="exampleEmail">Email</Label>
-                  <Input type="email" name="email" id="exampleEmail" placeholder="Enter email" />
+                  <Input type="email" name="email" id="email" placeholder="Enter email" />
                 </FormGroup>
                 <FormGroup>
                   <Label for="examplePassword">Password</Label>
-                  <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+                  <Input type="password" name="password" id="password" placeholder="password placeholder" />
                 </FormGroup>
               </Col>
             </Row>

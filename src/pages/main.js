@@ -59,7 +59,7 @@ class mainPage extends Component {
                   </Row>
                 </div>
                 <div className="card-body" style={{padding:0}}>
-                  <Container fluid={true}>
+                  {/* <Container fluid={true}>
                     <Row>
                       <Col xs="4" sm="4" md="4" style={{padding:0}}>
                         <div className="card">
@@ -110,7 +110,7 @@ class mainPage extends Component {
                         </div>
                       </Col>
                     </Row>
-                  </Container>
+                  </Container> */}
                 </div>
               </div>
             </Col>

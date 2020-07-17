@@ -39,9 +39,6 @@ class staffPage extends Component {
     });
   }
   render() {
-    // let url = this.props.location.search;
-    // let params = queryString.parse(url);
-    // console.log(params.id);
     return (
       <div>
         <Container fluid={true}>

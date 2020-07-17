@@ -6,7 +6,15 @@ import "../App.css";
 import {
   Container,
   Row,
-  Col
+  Col,
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Input,
+  FormGroup,
+  Label
 } from "reactstrap";
 
 
@@ -17,7 +25,9 @@ class categoryPage extends Component {
       navCollapse:false,
       navState:"",
       theposition:"",
-      listItem:["Item pertama","Item kedua","Item ketiga","Item keempat","Item kelima","Item keenam","Item ketujuh","Item kedelapan","Item kesembilan","Item kesepuluh","Item kesebelas","Item keduabelas"]
+      listItem:["Item pertama","Item kedua","Item ketiga","Item keempat","Item kelima","Item keenam","Item ketujuh","Item kedelapan","Item kesembilan","Item kesepuluh","Item kesebelas","Item keduabelas"],
+      prmModaladd:false,
+      prmModaledit:false
     };
   }
   navToggle = () =>  {
@@ -26,13 +36,56 @@ class categoryPage extends Component {
       navCollapse: !this.state.navCollapse
     });
   }
+  modalAddToggle = () =>  {
+    this.setState({
+      ...this.state,
+      prmModaladd: !this.state.prmModaladd
+    });
+  }
+  modalEditToggle = () =>  {
+    this.setState({
+      ...this.state,
+      prmModaledit: !this.state.prmModaledit
+    });
+  }
   render() {
-    // let url = this.props.location.search;
-    // let params = queryString.parse(url);
-    // console.log(params.id);
     return (
       <div>
         <Container fluid={true}>
+          <Modal isOpen={this.state.prmModaladd} toggle={() => this.modalAddToggle()} backdrop={"static"}>
+            <ModalHeader toggle={() => this.modalAddToggle()}>Add Category</ModalHeader>
+            <ModalBody>
+              <Row>
+                <Col>
+                  <FormGroup>
+                    <Label for="name">Category name</Label>
+                    <Input type="text" name="name" id="name" placeholder="Enter Category name" />
+                  </FormGroup>
+                </Col>
+              </Row>
+            </ModalBody>
+            <ModalFooter>
+              <Button color="success">Add</Button>
+              <Button color="danger" onClick={() => this.modalAddToggle()}>Cancel</Button>
+            </ModalFooter>
+          </Modal>
+          <Modal isOpen={this.state.prmModaledit} toggle={() => this.modalEditToggle()} backdrop={"static"}>
+            <ModalHeader toggle={() => this.modalEditToggle()}>Category</ModalHeader>
+            <ModalBody>
+              <Row>
+                <Col>
+                  <FormGroup>
+                    <Label for="name">Category name</Label>
+                    <Input type="text" name="name" id="name" value="Category name" />
+                  </FormGroup>
+                </Col>
+              </Row>
+            </ModalBody>
+            <ModalFooter>
+              <Button color="success">Save</Button>
+              <Button color="danger" onClick={() => this.modalEditToggle()}>Cancel</Button>
+            </ModalFooter>
+          </Modal>
           <Row>
             <Col>
               <div className="card" style={{marginTop:15}}>
@@ -42,7 +95,7 @@ class categoryPage extends Component {
                       <span style={{fontWeight:"bold"}}>Category item</span>
                     </Col>
                     <Col xs="2" sm="2" md="2" style={{display:"flex",justifyContent:"flex-end",alignItems:"center"}}>
-                      <button className="myBtn"><i className="fa fa-plus-square fa-2x" aria-hidden="true"></i></button>
+                      <button className="myBtn" onClick={() => this.modalAddToggle()}><i className="fa fa-plus-square fa-2x" aria-hidden="true"></i></button>
                     </Col>
                   </Row>
                 </div>
@@ -64,7 +117,7 @@ class categoryPage extends Component {
                             <div className="card-footer" style={{padding:0}}>
                                 <Row>
                                 <Col xs="6" sm="6" md="6" style={{color:"#003060",display:"flex",justifyContent:"center",alignItems:"center"}}>
-                                  <button className="myBtn"><i className="fa fa-pencil-square fa-2x" aria-hidden="true"></i></button>
+                                  <button className="myBtn" onClick={() => this.modalEditToggle()}><i className="fa fa-pencil-square fa-2x" aria-hidden="true"></i></button>
                                 </Col>
                                 <Col xs="6" sm="6" md="6" style={{color:"#003060",display:"flex",justifyContent:"center",alignItems:"center"}}>
                                   <button className="myBtn-danger"><i className="fa fa-ban fa-2x" aria-hidden="true"></i></button>
