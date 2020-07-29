@@ -58,60 +58,6 @@ class mainPage extends Component {
                     </Col>
                   </Row>
                 </div>
-                <div className="card-body" style={{padding:0}}>
-                  {/* <Container fluid={true}>
-                    <Row>
-                      <Col xs="4" sm="4" md="4" style={{padding:0}}>
-                        <div className="card">
-                          <div className="card-body">
-                            <Row>
-                              <Col xs="12" sm="12" md="12" style={{color:"#000000"}}>
-                                <span className="myFont-title myFontbold myColor">NAHMTHAISUKI & BBQ</span><br />
-                                <span className="myFont-subtitle myColor">JL K.H WAHID HASYIM No 79-81 Gondangdia, Menteng, Jakarta pusat</span>
-                              </Col>
-                            </Row>
-                          </div>
-                        </div>
-                      </Col>
-                      <Col xs="4" sm="4" md="4" style={{padding:0}}>
-                        <div className="card">
-                          <div className="card-body">
-                            <Row>
-                              <Col xs="12" sm="12" md="12" style={{color:"#000000"}}>
-                                <span className="myFont-title myFontbold myColor">NAHMTHAISUKI & BBQ</span><br />
-                                <span className="myFont-subtitle myColor">JL K.H WAHID HASYIM No 79-81 Gondangdia, Menteng, Jakarta pusat</span>
-                              </Col>
-                            </Row>
-                          </div>
-                        </div>
-                      </Col>
-                      <Col xs="4" sm="4" md="4" style={{padding:0}}>
-                        <div className="card">
-                          <div className="card-body">
-                            <Row>
-                              <Col xs="12" sm="12" md="12" style={{color:"#000000"}}>
-                                <span className="myFont-title myFontbold myColor">NAHMTHAISUKI & BBQ</span><br />
-                                <span className="myFont-subtitle myColor">JL K.H WAHID HASYIM No 79-81 Gondangdia, Menteng, Jakarta pusat</span>
-                              </Col>
-                            </Row>
-                          </div>
-                        </div>
-                      </Col>
-                      <Col xs="4" sm="4" md="4" style={{padding:10}}>
-                        <div className="card">
-                          <div className="card-body">
-                            <Row>
-                              <Col xs="12" sm="12" md="12" style={{color:"#000000"}}>
-                                <span className="myFont-title myFontbold myColor">NAHMTHAISUKI & BBQ</span><br />
-                                <span className="myFont-subtitle myColor">JL K.H WAHID HASYIM No 79-81 Gondangdia, Menteng, Jakarta pusat</span>
-                              </Col>
-                            </Row>
-                          </div>
-                        </div>
-                      </Col>
-                    </Row>
-                  </Container> */}
-                </div>
               </div>
             </Col>
           </Row>
