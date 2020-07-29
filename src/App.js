@@ -27,7 +27,6 @@ function App() {
             <Mainpage />
           </Route>
           <Route path="/outlet">
-            <Navbarpage />
             <Outletpage />
           </Route>
           <Route path="/categoryItem">

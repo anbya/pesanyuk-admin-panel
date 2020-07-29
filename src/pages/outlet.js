@@ -18,6 +18,7 @@ import {
   Label
 } from "reactstrap";
 import { FaStoreAlt , FaEdit } from "react-icons/fa";
+import Navbarpage from "./navbar";
 
 class outletPage extends Component {
   constructor(props) {
@@ -66,7 +67,12 @@ class outletPage extends Component {
   render() {
     return (
       <div>
-        <Container fluid={true}>
+        <div style={{position:"fixed",width:"100vw",height:"100vh",display:"flex",justifyContent:"center",alignItems:"center",zIndex:"999",background:"rgba(0, 0, 0, 0.7)"}}>
+          <div>
+          </div>
+        </div>
+        <Navbarpage />
+        <Container fluid={true} style={{paddingBottom:30}}>
           <Modal isOpen={this.state.prmModaladd} toggle={() => this.modalAddToggle()} backdrop={"static"}>
             <ModalHeader toggle={() => this.modalAddToggle()}>Add outlet</ModalHeader>
             <ModalBody>

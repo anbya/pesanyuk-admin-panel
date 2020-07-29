@@ -44,7 +44,7 @@ class mainPage extends Component {
     // console.log(params.id);
     return (
       <div>
-        <Container fluid={true}>
+        <Container fluid={true} style={{paddingBottom:30}}>
           <Row>
             <Col xs="6" sm="6" md="6">
               <div className="card" style={{marginTop:15}}>

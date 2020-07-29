@@ -65,7 +65,7 @@ class itemPage extends Component {
   render() {
     return (
       <div>
-        <Container fluid={true}>
+        <Container fluid={true} style={{paddingBottom:30}}>
           <Modal isOpen={this.state.prmModaladd} toggle={() => this.modalAddToggle()} backdrop={"static"}>
             <ModalHeader toggle={() => this.modalAddToggle()}>Add Item</ModalHeader>
             <ModalBody>
